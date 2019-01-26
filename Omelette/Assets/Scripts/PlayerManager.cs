@@ -24,11 +24,13 @@ public class PlayerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (sanityLevel + 1 > maxSanityLevel) return;
             sanityLevel++;
             ChangePostProcessing();
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
+            if (sanityLevel - 1 < 0) return;
             sanityLevel--;
             ChangePostProcessing();
         }
@@ -38,7 +40,7 @@ public class PlayerManager : MonoBehaviour
     private void ChangePostProcessing()
     {
         VignetteModel.Settings vign = ppProfile.vignette.settings;
-        vign.intensity = (sanityLevel / maxSanityLevel);
+        vign.intensity = Mathf.Abs(1 - (sanityLevel / maxSanityLevel) * 1.3f);
         ppProfile.vignette.settings = vign;
 
         ColorGradingModel.Settings CGrad = ppProfile.colorGrading.settings;
