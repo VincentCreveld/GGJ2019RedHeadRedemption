@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(Enemy))]
 [RequireComponent(typeof(NavMeshAgent))]
-public class Awareness : MonoBehaviour
+public class Awereness : MonoBehaviour
 {
-    private Enemy enemy;
-    private Patrol patrol;
-    private NavMeshAgent agent;
+    Enemy enemy;
+    Patrol patrol;
+    NavMeshAgent agent;
 
     [SerializeField]
     private bool isEmployee;
@@ -22,8 +22,6 @@ public class Awareness : MonoBehaviour
     private Vector3 ogRotation;
     private Vector3 ogPosition;
 
-    [SerializeField]
-    private Transform graphics;
     private void Start()
     {
         ogRotation = transform.rotation.eulerAngles;
@@ -32,15 +30,7 @@ public class Awareness : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    private void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    MoveToClean(new Vector3(-7.24f, 0, 2));
-        //}
-    }
-
-    public void MoveToClean(Transform posToMove)
+    public void MoveToClean(Vector3 posToMove)
     {
         if (isEmployee)
         {
@@ -60,13 +50,12 @@ public class Awareness : MonoBehaviour
         transform.LookAt(ogRotation);
     }
 
-    private IEnumerator CleanUp(Transform posToMove)
+    private IEnumerator CleanUp(Vector3 posToMove)
     {
         if (patrol) patrol.isStopped = true;
-        agent.SetDestination(posToMove.position);
+        agent.SetDestination(posToMove);
 
-        //while (agent.remainingDistance < 0.1f)
-        while (Vector3.Distance(graphics.transform.position, posToMove.position) < 0.1f)
+        while (agent.remainingDistance < 0.1f)
         {
             yield return null;
         }

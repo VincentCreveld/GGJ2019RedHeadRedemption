@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4947922715367965702}
   - component: {fileID: 1511119661677490335}
   - component: {fileID: 7436712305311421092}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,10 +105,10 @@ GameObject:
   - component: {fileID: 9109125193590312215}
   - component: {fileID: 7256386497984728939}
   - component: {fileID: 8713598681211362321}
-  - component: {fileID: 299399053}
-  m_Layer: 10
+  - component: {fileID: 1534607303438461613}
+  m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,7 +223,8 @@ MonoBehaviour:
   visionDistance: 5
   visionAngle: 75
   maxSanityLoss: 5
---- !u!114 &299399053
+  playerManager: {fileID: 0}
+--- !u!114 &1534607303438461613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,7 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1277b20e78f69f2498f0ea24d0c97a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEmployee: 1
-  timeToClean: 2
-  lookAtTime: 2
-  graphics: {fileID: 856194682181529500}
+  isEmployee: 0
+  timeToClean: 5
+  lookAtTime: 0
