@@ -28,12 +28,12 @@ public class LevelManager : MonoBehaviour
 		}
 	}
 
-	public void RegisterBottle(Vector3 pos)
+	public void RegisterBottle(Transform pos)
 	{
-		StartCoroutine(SendAgentToPos(2f, GetClosestAgent(pos), pos));
+		StartCoroutine(SendAgentToPos(2f, GetClosestAgent(pos.position), pos));
 	}
 
-	private IEnumerator SendAgentToPos(float delay, NavMeshAgent agent, Vector3 pos)
+	private IEnumerator SendAgentToPos(float delay, NavMeshAgent agent, Transform pos)
 	{
 		yield return new WaitForSeconds(delay);
 		agent.GetComponent<Awareness>().MoveToClean(pos);
@@ -60,6 +60,6 @@ public class LevelManager : MonoBehaviour
 	[ContextMenu("bottle")]
 	public void MovetoBottle()
 	{
-		RegisterBottle(bottlePos.position);
+		RegisterBottle(bottlePos);
 	}
 }

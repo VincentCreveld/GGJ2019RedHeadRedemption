@@ -6,6 +6,8 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
+  - Floor
+  - Enemy
   layers:
   - Default
   - TransparentFX

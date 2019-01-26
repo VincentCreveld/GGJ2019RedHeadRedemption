@@ -14,7 +14,7 @@ public class DistractionObject : MonoBehaviour
 
 	private void OnCollisionEnter(Collision collision)
 	{
-		if(collision.transform.tag == "Level" && !isPopped)
+		if(collision.transform.tag == "Floor" && !isPopped)
 		{
 			isPopped = true;
 			SendMessageToNearbyAgent();
