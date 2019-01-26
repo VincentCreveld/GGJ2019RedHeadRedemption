@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edebfd0245a7d79479014cc8e722d0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputType: 1
   playerModel: {fileID: 1002906256}
   camPosInPlayer: {fileID: 724178093}
   camObject: {fileID: 79037311}
