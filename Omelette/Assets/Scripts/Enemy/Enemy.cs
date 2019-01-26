@@ -52,8 +52,8 @@ public class Enemy : MonoBehaviour
         {
             if (hit.transform.gameObject.CompareTag("Player"))
             {
-                Debug.Log("GEZIEN!");
                 return true;
+
             }
             else
             {
