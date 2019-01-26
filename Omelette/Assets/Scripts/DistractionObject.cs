@@ -17,6 +17,7 @@ public class DistractionObject : MonoBehaviour
 		if(collision.transform.tag == "Floor" && !isPopped)
 		{
 			isPopped = true;
+			StartCoroutine(DestroyThis());
 			SendMessageToNearbyAgent();
 		}
 	}
@@ -58,5 +59,12 @@ public class DistractionObject : MonoBehaviour
 	public void ResetPickupable()
 	{
 		isPopped = false;
+		StopCoroutine(DestroyThis());
+	}
+
+	private IEnumerator DestroyThis()
+	{
+		yield return new WaitForSeconds(5f);
+		Destroy(gameObject);
 	}
 }

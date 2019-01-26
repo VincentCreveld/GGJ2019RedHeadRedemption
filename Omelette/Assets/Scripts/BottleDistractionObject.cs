@@ -51,7 +51,8 @@ public class BottleDistractionObject : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            StartCoroutine(FadePuddle());
+			if(other.GetComponent<Awareness>() != null && other.GetComponent<Awareness>().GetIsEmployee())
+				StartCoroutine(FadePuddle());
         }
     }
 

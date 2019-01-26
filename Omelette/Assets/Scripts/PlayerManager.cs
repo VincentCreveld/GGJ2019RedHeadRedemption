@@ -49,7 +49,12 @@ public class PlayerManager : MonoBehaviour
         ppProfile.colorGrading.settings = CGrad;
     }
 
-    private void ResetPostProcessing()
+	private void OnDisable()
+	{
+		ResetPostProcessing();
+	}
+
+	private void ResetPostProcessing()
     {
         VignetteModel.Settings vign = ppProfile.vignette.settings;
         vign.intensity = 0;
