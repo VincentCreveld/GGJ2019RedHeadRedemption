@@ -15,7 +15,6 @@ public class PatrolNode : MonoBehaviour
     void Start()
     {
         isCleared = false;
-        debugSphereSize = 0.25f;
     }
 
     public void Enter(NavMeshAgent agent)
@@ -36,22 +35,20 @@ public class PatrolNode : MonoBehaviour
         float r = UnityEngine.Random.Range(0, 1);
         if (r <= 0.5f) Debug.Log("LookLeft");
         else Debug.Log("LookRight");
-        StartCoroutine(ChangeDebugValue(agent));
+        StartCoroutine(StopPatrol(agent));
         isCleared = true;
     }
 
-    private IEnumerator ChangeDebugValue(NavMeshAgent agent)
+    private IEnumerator StopPatrol(NavMeshAgent agent)
     {
-        debugSphereSize = 1f;
         agent.isStopped = true;
         yield return new WaitForSeconds(1f);
         agent.isStopped = false;
-        debugSphereSize = 0.25f;
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawSphere(transform.position, debugSphereSize);
+        Gizmos.DrawSphere(transform.position, 0.25f);
     }
 }

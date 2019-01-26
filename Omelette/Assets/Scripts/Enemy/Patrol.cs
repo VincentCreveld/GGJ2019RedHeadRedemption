@@ -12,6 +12,7 @@ public class Patrol : MonoBehaviour
     private int destPoint = 0;
     private NavMeshAgent agent;
     private int previousdestPoint;
+    public bool isStopped = false;
 
 
     private void Start()
@@ -37,7 +38,6 @@ public class Patrol : MonoBehaviour
         agent.destination = points[destPoint].transform.position;
         if (destPoint - 1 < 0) previousdestPoint = points.Length - 1;
         else previousdestPoint = destPoint - 1;
-        Debug.Log(previousdestPoint);
         points[previousdestPoint].Enter(agent);
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
@@ -49,7 +49,7 @@ public class Patrol : MonoBehaviour
     {
         // Choose the next destination point when the agent gets
         // close to the current one.
-        if (!agent.pathPending && agent.remainingDistance < 0.1f)
+        if (!agent.pathPending && agent.remainingDistance < 0.1f && !isStopped)
         {
             GotoNextPoint();
         }
