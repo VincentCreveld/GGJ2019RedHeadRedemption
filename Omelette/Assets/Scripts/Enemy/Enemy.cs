@@ -16,7 +16,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(player.name);
     }
 
     // Update is called once per frame
@@ -53,6 +52,7 @@ public class Enemy : MonoBehaviour
         {
             if (hit.transform.gameObject.CompareTag("Player"))
             {
+                Debug.Log("GEZIEN!");
                 return true;
             }
             else
