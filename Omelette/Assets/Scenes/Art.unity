@@ -3306,12 +3306,12 @@ PrefabInstance:
     - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
         type: 3}
       propertyPath: visionAngle
-      value: 30
+      value: 30.3
       objectReference: {fileID: 0}
     - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
         type: 3}
       propertyPath: visionDistance
-      value: 12.35
+      value: 11.75
       objectReference: {fileID: 0}
     - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
         type: 3}
@@ -18720,7 +18720,7 @@ PrefabInstance:
     - target: {fileID: 8794315580476593814, guid: 943515a18d1865744865e20831082748,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.84289503
+      value: -0.8369436
       objectReference: {fileID: 0}
     - target: {fileID: 8794315580476593814, guid: 943515a18d1865744865e20831082748,
         type: 3}
@@ -18730,7 +18730,7 @@ PrefabInstance:
     - target: {fileID: 8794315580476593814, guid: 943515a18d1865744865e20831082748,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.53807807
+      value: -0.547289
       objectReference: {fileID: 0}
     - target: {fileID: 8794315580476593814, guid: 943515a18d1865744865e20831082748,
         type: 3}
@@ -18745,7 +18745,7 @@ PrefabInstance:
     - target: {fileID: 8794315580476593814, guid: 943515a18d1865744865e20831082748,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -245.10599
+      value: -246.362
       objectReference: {fileID: 0}
     - target: {fileID: 8794315580476593814, guid: 943515a18d1865744865e20831082748,
         type: 3}
@@ -18755,12 +18755,12 @@ PrefabInstance:
     - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
         type: 3}
       propertyPath: visionAngle
-      value: 110
+      value: 65.2
       objectReference: {fileID: 0}
     - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
         type: 3}
       propertyPath: visionDistance
-      value: 10.7
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
         type: 3}
