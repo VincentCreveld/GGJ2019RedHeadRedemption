@@ -50,7 +50,6 @@ public class PlayerManager : MonoBehaviour
     {
         VignetteModel.Settings vign = ppProfile.vignette.settings;
         vign.intensity = Mathf.Clamp(1 - (sanityLevel / maxSanityLevel) * vignIntensity, 0, 1);
-        Debug.Log(vign.intensity);
         ppProfile.vignette.settings = vign;
 
         ColorGradingModel.Settings CGrad = ppProfile.colorGrading.settings;

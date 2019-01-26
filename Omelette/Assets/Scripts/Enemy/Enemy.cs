@@ -55,7 +55,6 @@ public class Enemy : MonoBehaviour
         Debug.DrawRay(ToShootFrom, shootDirection);
         if (Physics.Raycast(ToShootFrom, shootDirection, out hit))
         {
-            Debug.Log(hit.transform.name);
             if (hit.transform.gameObject.CompareTag("Player"))
             {
                 return true;

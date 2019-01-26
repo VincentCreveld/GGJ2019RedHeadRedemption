@@ -10,6 +10,5 @@ public class WinObject : MonoBehaviour
     public void OnPickUp()
     {
         playerManager.hasWin = true;
-        gameObject.SetActive(false);
     }
 }

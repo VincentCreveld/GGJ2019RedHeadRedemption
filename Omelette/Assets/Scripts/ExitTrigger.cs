@@ -9,9 +9,11 @@ public class ExitTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && playerManager.hasWin)
+        if (other.gameObject.tag == "Player")
         {
-            Debug.Log("YOU HAVE WON");
+            Debug.Log("Player is in Trigger");
+            if (playerManager.hasWin)
+                Debug.Log("YOU HAVE WON");
         }
     }
 }
