@@ -46,6 +46,8 @@ public class LevelManager : MonoBehaviour
 		float closestDist = 100f;
 		foreach (var enemy in enemies)
 		{
+            if (enemy.GetComponent<Awareness>() != null && !enemy.GetComponent<Awareness>().GetIsEmployee())
+                continue;
 			float dist = Vector3.Distance(enemy.transform.position, pos);
 			if (dist < closestDist)
 			{

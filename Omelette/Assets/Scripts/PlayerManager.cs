@@ -11,13 +11,15 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private float maxSanityLevel;
     private PostProcessingProfile ppProfile;
+    [SerializeField]
+    private float vignIntensity;
     public float sanityLevel;
 
     private void Start()
     {
         ppProfile = cam.GetComponent<PostProcessingBehaviour>().profile;
         sanityLevel = maxSanityLevel;
-        ChangePostProcessing();
+        ResetPostProcessing();
     }
 
     public void DecreaseSanity(float changeAmount)
@@ -38,11 +40,23 @@ public class PlayerManager : MonoBehaviour
     private void ChangePostProcessing()
     {
         VignetteModel.Settings vign = ppProfile.vignette.settings;
-        vign.intensity = Mathf.Abs(1 - (sanityLevel / maxSanityLevel) * 1.3f);
+        vign.intensity = Mathf.Clamp(1 - (sanityLevel / maxSanityLevel) * vignIntensity, 0, 1);
+        Debug.Log(vign.intensity);
         ppProfile.vignette.settings = vign;
 
         ColorGradingModel.Settings CGrad = ppProfile.colorGrading.settings;
         CGrad.basic.saturation = (sanityLevel / maxSanityLevel);
+        ppProfile.colorGrading.settings = CGrad;
+    }
+
+    private void ResetPostProcessing()
+    {
+        VignetteModel.Settings vign = ppProfile.vignette.settings;
+        vign.intensity = 0;
+        ppProfile.vignette.settings = vign;
+
+        ColorGradingModel.Settings CGrad = ppProfile.colorGrading.settings;
+        CGrad.basic.saturation = 1;
         ppProfile.colorGrading.settings = CGrad;
     }
 }

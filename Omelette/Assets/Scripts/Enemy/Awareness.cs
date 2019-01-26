@@ -64,4 +64,9 @@ public class Awareness : MonoBehaviour
         if (patrol) patrol.isStopped = false;
         else agent.SetDestination(ogPosition);
     }
+
+    public bool GetIsEmployee()
+    {
+        return isEmployee;
+    }
 }
