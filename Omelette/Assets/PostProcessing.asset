@@ -125,7 +125,7 @@ MonoBehaviour:
         temperature: 0
         tint: 0
         hueShift: 0
-        saturation: 1.018
+        saturation: 1
         contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
         log:
           slope: {r: 0.9994355, g: 1, b: 0.8673975, a: 0}
           power: {r: 0.77872264, g: 0.8451534, b: 1, a: 0}
-          offset: {r: 1, g: 1, b: 1, a: 0}
+          offset: {r: 1, g: 0.90761894, b: 0.8594743, a: 0}
         linear:
           lift: {r: 0, g: 0, b: 0, a: 0}
           gamma: {r: 0, g: 0, b: 0, a: 0}
@@ -309,7 +309,7 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 1
+      intensity: 0.1
   grain:
     m_Enabled: 0
     m_Settings:
@@ -318,13 +318,13 @@ MonoBehaviour:
       size: 1
       luminanceContribution: 0.8
   vignette:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0
-      smoothness: 0.825
+      intensity: 0.45
+      smoothness: 0.2
       roundness: 1
       mask: {fileID: 0}
       opacity: 1
