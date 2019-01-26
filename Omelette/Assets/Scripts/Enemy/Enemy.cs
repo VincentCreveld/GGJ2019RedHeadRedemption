@@ -47,6 +47,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            playerManager.Lose();
+    }
+
     private bool CheckCollision()
     {
         RaycastHit hit;

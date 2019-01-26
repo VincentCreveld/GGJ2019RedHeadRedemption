@@ -41,7 +41,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private void Lose()
+    public void Lose()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
