@@ -30,14 +30,6 @@ public class Awereness : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MoveToClean(new Vector3(-7.24f, 0, 2));
-        }
-    }
-
     public void MoveToClean(Vector3 posToMove)
     {
         if (isEmployee)

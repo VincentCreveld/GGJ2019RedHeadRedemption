@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     private float visionDistance, visionAngle;
     [SerializeField]
     private float maxSanityLoss;
+    [SerializeField]
+    private PlayerManager playerManager;
 
     private GameObject player;
 
@@ -38,8 +40,7 @@ public class Enemy : MonoBehaviour
             if (angle <= visionAngle)
             {
                 if (CheckCollision())
-                    //TODO Retract sanity
-                    Debug.Log("SanityLoss : " + maxSanityLoss);
+                    playerManager.DecreaseSanity(maxSanityLoss / 60f);
             }
         }
     }
@@ -48,19 +49,23 @@ public class Enemy : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 ToShootFrom = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
+        Debug.Log(player.name);
+        Debug.DrawLine(ToShootFrom, player.transform.position);
         if (Physics.Raycast(ToShootFrom, player.transform.position, out hit, visionDistance))
         {
             if (hit.transform.gameObject.CompareTag("Player"))
             {
                 return true;
-
             }
             else
             {
                 return false;
             }
         }
-        else return false;
+        else
+        {
+            return false;
+        }
     }
 
     private void OnDrawGizmos()

@@ -17,6 +17,7 @@ public class PlayerManager : MonoBehaviour
     {
         ppProfile = cam.GetComponent<PostProcessingBehaviour>().profile;
         sanityLevel = maxSanityLevel;
+        ChangePostProcessing();
     }
 
     // Update is called once per frame
@@ -34,7 +35,21 @@ public class PlayerManager : MonoBehaviour
             sanityLevel--;
             ChangePostProcessing();
         }
+    }
 
+    public void DecreaseSanity(float changeAmount)
+    {
+        Debug.Log("@DecreaseSanity" + changeAmount);
+        if (sanityLevel - changeAmount < 0)
+        {
+            sanityLevel -= changeAmount;
+            ChangePostProcessing();
+        }
+        else
+        {
+            sanityLevel = 0;
+            ChangePostProcessing();
+        }
     }
 
     private void ChangePostProcessing()
