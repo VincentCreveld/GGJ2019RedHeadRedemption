@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3430063854661701873}
   - component: {fileID: 3430063854661701872}
   - component: {fileID: 3430063854661701770}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PatrolEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 1223495689999266037}
   - component: {fileID: 6622384441976321451}
   - component: {fileID: 7168375743844129856}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
