@@ -197,7 +197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246250392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 4.07}
+  m_LocalPosition: {x: 0, y: 0.5, z: 3.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -821,24 +821,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 943515a18d1865744865e20831082748, type: 3}
---- !u!1 &8713598681211362320 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8713598681211362320, guid: 943515a18d1865744865e20831082748,
-    type: 3}
-  m_PrefabInstance: {fileID: 2704218340841319705}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8713598681211362321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8713598681211362320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4443ae9fd54bc3e4fb4add2ab913c512, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visionDistance: 5
-  visionAngle: 25
-  maxSanityLoss: 5
