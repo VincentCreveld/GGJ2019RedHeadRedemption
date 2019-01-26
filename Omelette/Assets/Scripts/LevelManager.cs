@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
 
 	private string clipToPlay = "yeet";
 
-	public Transform bottlepos;
+	public Transform bottlePos;
 
 	private void Awake()
 	{
@@ -60,6 +60,6 @@ public class LevelManager : MonoBehaviour
 	[ContextMenu("bottle")]
 	public void MovetoBottle()
 	{
-		RegisterBottle(bottlepos.position);
+		RegisterBottle(bottlePos.position);
 	}
 }
