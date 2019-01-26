@@ -37,10 +37,15 @@ public class Enemy : MonoBehaviour
 
         if (distanceToPlayer <= visionDistance)
         {
+            Debug.Log("In Distance");
             if (angle <= visionAngle)
             {
+                Debug.Log("In POV");
                 if (CheckCollision())
-                    playerManager.DecreaseSanity(maxSanityLoss / 60f);
+                {
+                    Debug.Log("Spotted by Ray");
+                    playerManager.DecreaseSanity(maxSanityLoss / 100f);
+                }
             }
         }
     }
@@ -48,22 +53,26 @@ public class Enemy : MonoBehaviour
     private bool CheckCollision()
     {
         RaycastHit hit;
+        Vector3 shootDirection = player.transform.position - transform.position;
         Vector3 ToShootFrom = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
-        Debug.Log(player.name);
-        Debug.DrawLine(ToShootFrom, player.transform.position);
-        if (Physics.Raycast(ToShootFrom, player.transform.position, out hit, visionDistance))
+        Debug.DrawRay(ToShootFrom, shootDirection);
+        if (Physics.Raycast(ToShootFrom, shootDirection, out hit))
         {
+            Debug.Log(hit.transform.name);
             if (hit.transform.gameObject.CompareTag("Player"))
             {
+                Debug.Log("Player Hit!");
                 return true;
             }
             else
             {
+                Debug.Log("Hit but not Player: " + hit.transform.name);
                 return false;
             }
         }
         else
         {
+            Debug.Log("Nothing Hit");
             return false;
         }
     }

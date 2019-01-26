@@ -20,34 +20,17 @@ public class PlayerManager : MonoBehaviour
         ChangePostProcessing();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (sanityLevel + 1 > maxSanityLevel) return;
-            sanityLevel++;
-            ChangePostProcessing();
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            if (sanityLevel - 1 < 0) return;
-            sanityLevel--;
-            ChangePostProcessing();
-        }
-    }
-
     public void DecreaseSanity(float changeAmount)
     {
         Debug.Log("@DecreaseSanity" + changeAmount);
         if (sanityLevel - changeAmount < 0)
         {
-            sanityLevel -= changeAmount;
+            sanityLevel = 0;
             ChangePostProcessing();
         }
         else
         {
-            sanityLevel = 0;
+            sanityLevel -= changeAmount;
             ChangePostProcessing();
         }
     }
