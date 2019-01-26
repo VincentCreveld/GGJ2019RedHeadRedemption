@@ -37,13 +37,10 @@ public class Enemy : MonoBehaviour
 
         if (distanceToPlayer <= visionDistance)
         {
-            Debug.Log("In Distance");
             if (angle <= visionAngle)
             {
-                Debug.Log("In POV");
                 if (CheckCollision())
                 {
-                    Debug.Log("Spotted by Ray");
                     playerManager.DecreaseSanity(maxSanityLoss / 100f);
                 }
             }
@@ -61,18 +58,15 @@ public class Enemy : MonoBehaviour
             Debug.Log(hit.transform.name);
             if (hit.transform.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Player Hit!");
                 return true;
             }
             else
             {
-                Debug.Log("Hit but not Player: " + hit.transform.name);
                 return false;
             }
         }
         else
         {
-            Debug.Log("Nothing Hit");
             return false;
         }
     }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class PlayerManager : MonoBehaviour
     private PostProcessingProfile ppProfile;
     [SerializeField]
     private float vignIntensity;
+    [SerializeField]
+    private bool canLose;
     public float sanityLevel;
+    public bool hasWin;
 
     private void Start()
     {
@@ -24,17 +28,22 @@ public class PlayerManager : MonoBehaviour
 
     public void DecreaseSanity(float changeAmount)
     {
-        Debug.Log("@DecreaseSanity" + changeAmount);
         if (sanityLevel - changeAmount < 0)
         {
             sanityLevel = 0;
             ChangePostProcessing();
+            if(canLose) Lose();
         }
         else
         {
             sanityLevel -= changeAmount;
             ChangePostProcessing();
         }
+    }
+
+    private void Lose()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void ChangePostProcessing()
