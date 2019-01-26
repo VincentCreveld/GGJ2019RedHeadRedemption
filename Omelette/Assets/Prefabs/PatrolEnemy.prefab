@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3430063854661701873}
   - component: {fileID: 3430063854661701872}
   - component: {fileID: 3430063854661701770}
+  - component: {fileID: 1545948734}
   m_Layer: 0
   m_Name: PatrolEnemy
   m_TagString: Untagged
@@ -122,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolParent: {fileID: 0}
+  isStopped: 0
 --- !u!195 &3430063854661701770
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -144,3 +146,18 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1545948734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3430063854661701875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1277b20e78f69f2498f0ea24d0c97a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmployee: 1
+  timeToClean: 5
+  lookAtTime: 1

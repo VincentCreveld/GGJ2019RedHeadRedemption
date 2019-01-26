@@ -13,7 +13,9 @@ public class LevelManager : MonoBehaviour
 	[SerializeField]
 	private AudioManager announcementManager;
 
-	private string clipToPlay;
+	private string clipToPlay = "yeet";
+
+	public Transform bottlepos;
 
 	private void Awake()
 	{
@@ -34,14 +36,14 @@ public class LevelManager : MonoBehaviour
 	private IEnumerator SendAgentToPos(float delay, NavMeshAgent agent, Vector3 pos)
 	{
 		yield return new WaitForSeconds(delay);
-		//agent.GetComponent<Awareness>().MoveToClean(pos)
+		agent.GetComponent<Awareness>().MoveToClean(pos);
 		announcementManager.PlayAudio(clipToPlay);
 	}
 
 	private NavMeshAgent GetClosestAgent(Vector3 pos)
 	{
 		NavMeshAgent closestEnemy = null;
-		float closestDist = 0f;
+		float closestDist = 100f;
 		foreach (var enemy in enemies)
 		{
 			float dist = Vector3.Distance(enemy.transform.position, pos);
@@ -53,5 +55,11 @@ public class LevelManager : MonoBehaviour
 		}
 
 		return closestEnemy;
+	}
+
+	[ContextMenu("bottle")]
+	public void MovetoBottle()
+	{
+		RegisterBottle(bottlepos.position);
 	}
 }
