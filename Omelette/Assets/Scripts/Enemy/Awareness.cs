@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(Enemy))]
 [RequireComponent(typeof(NavMeshAgent))]
-public class Awereness : MonoBehaviour
+public class Awareness : MonoBehaviour
 {
     Enemy enemy;
     Patrol patrol;

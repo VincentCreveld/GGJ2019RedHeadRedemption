@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
 	private IEnumerator SendAgentToPos(float delay, NavMeshAgent agent, Transform pos)
 	{
 		yield return new WaitForSeconds(delay);
-		agent.GetComponent<Awareness>().MoveToClean(pos);
+		agent.GetComponent<Awareness>().MoveToClean(pos.position);
 		announcementManager.PlayAudio(clipToPlay);
 	}
 

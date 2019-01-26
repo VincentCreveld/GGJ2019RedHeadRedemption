@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 3430063854661701872}
   - component: {fileID: 3430063854661701770}
   - component: {fileID: 1856570390564876179}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PatrolEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visionDistance: 5
   visionAngle: 75
-  maxSanityLoss: 5
+  maxSanityLoss: 1
   playerManager: {fileID: 0}
 --- !u!114 &3430063854661701872
 MonoBehaviour:
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 1223495689999266037}
   - component: {fileID: 6622384441976321451}
   - component: {fileID: 7168375743844129856}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
