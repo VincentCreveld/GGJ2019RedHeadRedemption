@@ -9,6 +9,7 @@ public class GlobalGameManager : MonoBehaviour
     private string kitchenSceneName;
     [SerializeField]
     private string[] levelNames;
+    [HideInInspector]
     public bool[] levelFinished;
 
     public void FinishLevel()
