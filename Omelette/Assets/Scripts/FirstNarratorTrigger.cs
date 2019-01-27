@@ -8,11 +8,18 @@ public class FirstNarratorTrigger : MonoBehaviour
     private KitchenManager kitchenManager;
     private GlobalGameManager GGManager;
 
-    private void OnTriggerEnter(Collider other)
+	private void Start()
+	{
+		GGManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GlobalGameManager>();
+	}
+
+	private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" && !GGManager.firstNarrationPlayed)
         {
-            kitchenManager.PlayNarration(0);
+			GGManager.firstNarrationPlayed = true;
+
+			kitchenManager.PlayNarration(0);
         }
     }
 }

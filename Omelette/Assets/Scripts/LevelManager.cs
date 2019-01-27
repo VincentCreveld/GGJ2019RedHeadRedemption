@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
 	{
 		yield return new WaitForSeconds(delay);
 		agent.GetComponent<Awareness>().MoveToClean(pos.position);
-		announcementManager.PlayAudio(clipToPlay);
+		//announcementManager.PlayAudio(clipToPlay);
 	}
 
 	private NavMeshAgent GetClosestAgent(Vector3 pos)
