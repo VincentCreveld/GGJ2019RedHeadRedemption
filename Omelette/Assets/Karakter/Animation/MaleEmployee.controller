@@ -150,17 +150,25 @@ BlendTree:
     m_DirectBlendParameter: Sanity
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: e2cae644a3332394d942457a6167f1bc, type: 3}
-    m_Threshold: 0.75
+    m_Motion: {fileID: 7400002, guid: acfd16d37199b8546b18fa0fda5fe58e, type: 3}
+    m_Threshold: 0.8
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 0.01
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Sanity
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: e2cae644a3332394d942457a6167f1bc, type: 3}
+    m_Threshold: 1
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Sanity
     m_Mirror: 0
   m_BlendParameter: Sanity
   m_BlendParameterY: Sanity
   m_MinThreshold: 0
-  m_MaxThreshold: 0.75
+  m_MaxThreshold: 1
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
@@ -221,7 +229,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State
+  m_Name: IdleState
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
