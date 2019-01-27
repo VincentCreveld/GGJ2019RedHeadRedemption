@@ -48,7 +48,7 @@ public class EnemyModelAssigner : MonoBehaviour
 		animatedComponent.transform.localPosition -= (Vector3.up * 0.5f);
 		animHead = animatedComponent.GetComponentInChildren<GetAnimationHead>();
 
-		currentMat = animatedComponent.GetComponent<Renderer>().material;
+		currentMat = animatedComponent.GetComponentInChildren<Renderer>().material;
 		startingColor = currentMat.color;
 
 		maskInstance = Instantiate(mask, animHead.head);
@@ -82,7 +82,7 @@ public class EnemyModelAssigner : MonoBehaviour
 	{
 		Color col = new Color();
 
-		col = Color.Lerp(startingColor, monsterMat.color, Mathf.Abs(1-sanity));
+		col = Color.Lerp(startingColor, monsterMat.color, sanity);
 
 		return col;
 	}
