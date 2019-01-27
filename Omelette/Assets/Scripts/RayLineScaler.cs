@@ -8,6 +8,9 @@ public class RayLineScaler : MonoBehaviour
 	private Transform lineToScale;
 
 	[SerializeField]
+	private float rayLength;
+
+	[SerializeField]
 	private Transform cursor;
 	private bool isCursorValid = false;
 
@@ -17,7 +20,7 @@ public class RayLineScaler : MonoBehaviour
 	private void Update()
 	{
 		RaycastHit hit;
-		if (Physics.Raycast(transform.position, transform.forward, out hit, 50f, layerMask))
+		if (Physics.Raycast(transform.position, transform.forward, out hit, rayLength, layerMask))
 		{
 			cursor.position = hit.point;
 			float scale = 0f;
@@ -37,7 +40,7 @@ public class RayLineScaler : MonoBehaviour
 			isCursorValid = false;
 			//Fallback in case no hit is found.
 			lineToScale.LookAt(lineToScale.position + lineToScale.forward);
-			lineToScale.transform.localScale = new Vector3(lineToScale.transform.localScale.x, lineToScale.transform.localScale.y, 40f);
+			lineToScale.transform.localScale = new Vector3(lineToScale.transform.localScale.x, lineToScale.transform.localScale.y, rayLength);
 		}
 	}
 
