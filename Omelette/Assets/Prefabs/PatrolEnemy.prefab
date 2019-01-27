@@ -266,8 +266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEmployee: 0
-  timeToClean: 5
-  lookAtTime: 0
+  timeToClean: 20
+  lookAtTime: 20
 --- !u!1 &8567254862248528099
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField]
 	private NavMeshAgent playerModel;
     [SerializeField]
-    private MeshRenderer playerRenderer;
+    private Renderer playerRenderer;
 
 	[SerializeField]
 	private Transform camPosInPlayer;

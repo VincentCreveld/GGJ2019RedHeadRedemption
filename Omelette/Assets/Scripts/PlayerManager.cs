@@ -59,7 +59,7 @@ public class PlayerManager : MonoBehaviour
 
 	public float GetCurrentSanityOnScale01()
 	{
-		return Mathf.Clamp01(Mathf.InverseLerp(0, maxSanityLevel, sanityLevel));
+		return Mathf.Clamp01(Mathf.InverseLerp(maxSanityLevel, 0, sanityLevel));
 	}
 
 	private void OnDisable()

@@ -12,7 +12,7 @@ public class AnimatedHumanoid : MonoBehaviour
 	[SerializeField]
 	private NavMeshAgent playerAgent;
 
-	private float sanity;
+	private float sanity = 0f;
 
 	private void Awake()
 	{
@@ -28,13 +28,14 @@ public class AnimatedHumanoid : MonoBehaviour
 
 	private void SetSanity()
 	{
-		playerManager.GetCurrentSanityOnScale01();
+		sanity = playerManager.GetCurrentSanityOnScale01();
 		anim.SetFloat("Sanity", sanity);
 	}
 
 	private void SetIsWalking()
 	{
-		anim.SetBool("IsWalking", playerAgent.isStopped);
+        bool val = playerAgent.velocity.magnitude > 1.25f;
+		anim.SetBool("IsWalking", val);
 	}
 
 }
