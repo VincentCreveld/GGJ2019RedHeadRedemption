@@ -18,7 +18,7 @@ public class GlobalGameManager : MonoBehaviour
 
     public void Start()
     {
-        levelFinished = new bool[levelNames.Length];
+        levelFinished = new bool[SceneManager.sceneCount];
         narrationClipsPlayed = new bool[kitchenManager.narrations.Length];
     }
 

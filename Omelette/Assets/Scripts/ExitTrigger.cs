@@ -18,7 +18,7 @@ public class ExitTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             if (playerManager.hasWin)
-                GGManager.GoToNextLevel();
+                GGManager.FinishLevel();
         }
     }
 }
