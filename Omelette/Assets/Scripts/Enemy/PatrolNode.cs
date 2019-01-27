@@ -32,8 +32,8 @@ public class PatrolNode : MonoBehaviour
 
     private void LookBehaviour(NavMeshAgent agent)
     {
-        float r = UnityEngine.Random.Range(0, 1);
-        if (r <= 0.5f) Debug.Log("LookLeft");
+        float r = UnityEngine.Random.Range(0, 10);
+        if (r <= 5) Debug.Log("LookLeft");
         else Debug.Log("LookRight");
         StartCoroutine(StopPatrol(agent));
         isCleared = true;

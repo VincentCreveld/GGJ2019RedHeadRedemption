@@ -45,4 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   maxSanityLevel: 5
+  sanityLossPerMinute: 0.5
+  vignIntensity: 2
+  canLose: 1
   sanityLevel: 5
+  hasWin: 0
