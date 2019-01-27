@@ -391,6 +391,11 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 9194050005205934025}
+    - target: {fileID: 3689359791006543302, guid: 570a50f45ce220b45a8213c3eb8fc870,
+        type: 3}
+      propertyPath: head
+      value: 
+      objectReference: {fileID: 9194050004901611808}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570a50f45ce220b45a8213c3eb8fc870, type: 3}
 --- !u!4 &9194050004000849187 stripped
@@ -498,6 +503,12 @@ Transform:
 --- !u!4 &9194050004707477663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1518586144, guid: 570a50f45ce220b45a8213c3eb8fc870,
+    type: 3}
+  m_PrefabInstance: {fileID: 9194050004061733311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9194050004901611808 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1443989663, guid: 570a50f45ce220b45a8213c3eb8fc870,
     type: 3}
   m_PrefabInstance: {fileID: 9194050004061733311}
   m_PrefabAsset: {fileID: 0}
