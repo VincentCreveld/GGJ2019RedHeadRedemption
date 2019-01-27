@@ -3324,39 +3324,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
         type: 3}
-      propertyPath: visionAngle
-      value: 29.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
-        type: 3}
-      propertyPath: visionDistance
-      value: 11.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
-        type: 3}
       propertyPath: playerManager
       value: 
       objectReference: {fileID: 1388324352}
-    - target: {fileID: 1534607303438461613, guid: 943515a18d1865744865e20831082748,
-        type: 3}
-      propertyPath: timeToClean
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534607303438461613, guid: 943515a18d1865744865e20831082748,
-        type: 3}
-      propertyPath: lookAtTime
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534607303438461613, guid: 943515a18d1865744865e20831082748,
-        type: 3}
-      propertyPath: isEmployee
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 674892704540985126, guid: 943515a18d1865744865e20831082748,
-        type: 3}
-      propertyPath: isEmployee
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 809435986, guid: 943515a18d1865744865e20831082748, type: 3}
       propertyPath: playerManager
       value: 

@@ -196,8 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4443ae9fd54bc3e4fb4add2ab913c512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionDistance: 5
-  visionAngle: 75
+  visionDistance: 11.75
+  visionAngle: 29.1
   maxSanityLoss: 1
   playerManager: {fileID: 0}
 --- !u!114 &674892704540985126
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1277b20e78f69f2498f0ea24d0c97a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEmployee: 0
+  isEmployee: 1
   timeToClean: 20
   lookAtTime: 20
 --- !u!114 &809435986
@@ -229,7 +229,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   awareness: {fileID: 674892704540985126}
   agent: {fileID: 7256386497984728939}
+  playerManager: {fileID: 0}
   maleEmployee: {fileID: 4967294754279467430, guid: 3a7af49cd93e03348889d3975a7a76fd,
     type: 3}
   maleCustomer: {fileID: 715475009289061834, guid: fe12c66aa3760634898f3749709d5e2b,
     type: 3}
+  mask: {fileID: 6258926799043059218, guid: 20eebc4743a19a84bb6d20b84e395ca0, type: 3}
+  monsterMat: {fileID: 2100000, guid: 9290c0fbbccc1244e972a23ad26094d2, type: 2}
