@@ -5,7 +5,7 @@ using UnityEngine;
 public class KitchenManager : MonoBehaviour
 {
     [SerializeField]
-    private AudioClip[] narrations;
+    public AudioClip[] narrations;
     [SerializeField]
     private AudioSource audioSource;
     public int previouslevel;
@@ -14,20 +14,12 @@ public class KitchenManager : MonoBehaviour
     private void Start()
     {
         GGManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GlobalGameManager>();
-        if (!GGManager.firstNarrationPlayed)
-        {
-            PlayNarration(0);
-            GGManager.firstNarrationPlayed = true;
-        }
     }
 
     public void PlayNarration(int index)
     {
-        if (!GGManager.narrationClipsPlayed[index])
-        {
-            audioSource.clip = narrations[index];
-            audioSource.Play();
-            GGManager.narrationClipsPlayed[index] = true;
-        }
+        audioSource.clip = narrations[index];
+        audioSource.Play();
+        GGManager.narrationClipsPlayed[index] = true;
     }
 }
