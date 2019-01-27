@@ -18,6 +18,10 @@ public class PlayerManager : MonoBehaviour
     private float vignIntensity;
     [SerializeField]
     private bool canLose;
+    [SerializeField]
+    AudioSource[] sanityMusicSources = new AudioSource[3];
+    [SerializeField]
+    AudioClip[] music = new AudioClip[3];
     public float sanityLevel;
     public bool hasWin;
 
@@ -27,6 +31,11 @@ public class PlayerManager : MonoBehaviour
         sanityLevel = maxSanityLevel;
         ResetPostProcessing();
         StartCoroutine(LoseSanityOverTime());
+        for (int i = 0; i < sanityMusicSources.Length; i++)
+        {
+            sanityMusicSources[i].clip = music[i];
+        }
+        sanityMusicSources[0].Play();
     }
 
     public void DecreaseSanity(float changeAmount)
@@ -40,6 +49,14 @@ public class PlayerManager : MonoBehaviour
         else
         {
             sanityLevel -= changeAmount;
+            if(sanityLevel != maxSanityLevel)
+            {
+                sanityMusicSources[1].Play();
+            }
+            if(sanityLevel < maxSanityLevel * 0.5f)
+            {
+                sanityMusicSources[2].Play();
+            }
             ChangePostProcessing();
         }
     }
