@@ -12,6 +12,8 @@ public class EnemyModelAssigner : MonoBehaviour
 
 	[SerializeField]
 	private NavMeshAgent agent;
+	[SerializeField]
+	private PlayerManager playerManager;
 
 	[SerializeField]
 	private GameObject maleEmployee, maleCustomer;
@@ -34,6 +36,12 @@ public class EnemyModelAssigner : MonoBehaviour
 	private void Update()
 	{
 		SetIsWalking();
+		SetAnimSanity();
+	}
+
+	private void SetAnimSanity()
+	{
+		anim.SetFloat("Sanity", playerManager.GetCurrentSanityOnScale01());
 	}
 
 	private void SetIsWalking()
