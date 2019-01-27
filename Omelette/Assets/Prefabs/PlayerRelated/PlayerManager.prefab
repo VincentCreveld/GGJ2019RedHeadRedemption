@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7098022901005300492}
   - component: {fileID: 7098022901005300483}
+  - component: {fileID: 1611939878}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -45,4 +46,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   maxSanityLevel: 5
+  vignIntensity: 2
+  canLose: 0
   sanityLevel: 5
+  hasWin: 0
+--- !u!114 &1611939878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098022901005300482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf5de0102683d24b81ce9c218f72548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerManager: {fileID: 7098022901005300483}
+  anim: {fileID: 0}
+  playerAgent: {fileID: 0}

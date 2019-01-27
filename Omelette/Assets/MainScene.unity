@@ -21640,7 +21640,7 @@ PrefabInstance:
     - target: {fileID: 2971687330284043946, guid: 68e1b53f818033c4da730e1edcbaae48,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 35.44
       objectReference: {fileID: 0}
     - target: {fileID: 2971687330284043946, guid: 68e1b53f818033c4da730e1edcbaae48,
         type: 3}
@@ -21650,7 +21650,7 @@ PrefabInstance:
     - target: {fileID: 2971687330284043946, guid: 68e1b53f818033c4da730e1edcbaae48,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 2971687330284043946, guid: 68e1b53f818033c4da730e1edcbaae48,
         type: 3}
@@ -21722,6 +21722,11 @@ PrefabInstance:
       propertyPath: enemies.Array.data[4]
       value: 
       objectReference: {fileID: 1233313764}
+    - target: {fileID: 2971687330284043945, guid: 68e1b53f818033c4da730e1edcbaae48,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68e1b53f818033c4da730e1edcbaae48, type: 3}
 --- !u!1 &1520588923 stripped
