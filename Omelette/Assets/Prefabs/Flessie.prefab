@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 13675308}
   - component: {fileID: 13675307}
   - component: {fileID: 13675306}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 1729555970}
   - component: {fileID: 1729555972}
   - component: {fileID: 1729555971}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Stain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 5468661942879352812}
   - component: {fileID: 2206120594709625756}
   - component: {fileID: 7234032182873018502}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 7359979471590119622}
   - component: {fileID: 7633083215122345271}
   - component: {fileID: 8337697171562301503}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1942602534243520992}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8284621676870747191}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Stain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 7204960094218401411}
   - component: {fileID: 5077715192739627085}
   - component: {fileID: 1722151418257446726}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 5098542072368345637}
   - component: {fileID: 5954992341649769008}
   - component: {fileID: 1690812622759761614}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Flessie
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class PlayerManager : MonoBehaviour
     private PostProcessingProfile ppProfile;
     [SerializeField]
     private float vignIntensity;
+    [SerializeField]
+    private bool canLose;
     public float sanityLevel;
+    public bool hasWin;
 
     private void Start()
     {
@@ -24,11 +28,11 @@ public class PlayerManager : MonoBehaviour
 
     public void DecreaseSanity(float changeAmount)
     {
-        Debug.Log("@DecreaseSanity" + changeAmount);
         if (sanityLevel - changeAmount < 0)
         {
             sanityLevel = 0;
             ChangePostProcessing();
+            if(canLose) Lose();
         }
         else
         {
@@ -37,11 +41,15 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public void Lose()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     private void ChangePostProcessing()
     {
         VignetteModel.Settings vign = ppProfile.vignette.settings;
         vign.intensity = Mathf.Clamp(1 - (sanityLevel / maxSanityLevel) * vignIntensity, 0, 1);
-        Debug.Log(vign.intensity);
         ppProfile.vignette.settings = vign;
 
         ColorGradingModel.Settings CGrad = ppProfile.colorGrading.settings;
@@ -49,12 +57,7 @@ public class PlayerManager : MonoBehaviour
         ppProfile.colorGrading.settings = CGrad;
     }
 
-	private void OnDisable()
-	{
-		ResetPostProcessing();
-	}
-
-	private void ResetPostProcessing()
+    private void ResetPostProcessing()
     {
         VignetteModel.Settings vign = ppProfile.vignette.settings;
         vign.intensity = 0;

@@ -37,13 +37,10 @@ public class Enemy : MonoBehaviour
 
         if (distanceToPlayer <= visionDistance)
         {
-            Debug.Log("In Distance");
             if (angle <= visionAngle)
             {
-                Debug.Log("In POV");
                 if (CheckCollision())
                 {
-                    Debug.Log("Spotted by Ray");
                     playerManager.DecreaseSanity(maxSanityLoss / 100f);
                 }
             }
@@ -58,39 +55,29 @@ public class Enemy : MonoBehaviour
         Debug.DrawRay(ToShootFrom, shootDirection);
         if (Physics.Raycast(ToShootFrom, shootDirection, out hit))
         {
-            Debug.Log(hit.transform.name);
             if (hit.transform.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Player Hit!");
                 return true;
             }
             else
             {
-                Debug.Log("Hit but not Player: " + hit.transform.name);
                 return false;
             }
         }
         else
         {
-            Debug.Log("Nothing Hit");
             return false;
         }
     }
 
-	private void OnDrawGizmos()
-	{
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere(transform.position, visionDistance);
-	}
+    public void KillPlayer()
+    {
+        playerManager.Lose();
+    }
 
-	private void OnDrawGizmosSelected()
-	{
-		Vector3 target = (transform.forward).normalized * visionDistance;
-		target = Quaternion.Euler(0, visionAngle/2, 0) * target;
-		Gizmos.DrawLine(transform.position, (transform.position + target));
-
-		Vector3 target2 = (transform.forward).normalized * visionDistance;
-		target2 = Quaternion.Euler(0, -visionAngle / 2, 0) * target2;
-		Gizmos.DrawLine(transform.position, (transform.position + target2));
-	}
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, visionDistance);
+    }
 }

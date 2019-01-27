@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2010790488112550302}
   - component: {fileID: 2010790488112550303}
   - component: {fileID: 2010790488112550288}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Blinkie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 2010790488438349119}
   - component: {fileID: 2010790488438349104}
   - component: {fileID: 2010790488438349105}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
