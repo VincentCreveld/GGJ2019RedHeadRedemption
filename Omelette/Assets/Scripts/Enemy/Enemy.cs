@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+		GetComponent<HackyFOVCaster>().SetFOV(visionAngle, visionDistance);
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class Enemy : MonoBehaviour
 
         if (distanceToPlayer <= visionDistance)
         {
-            if (angle <= visionAngle)
+            if (angle <= visionAngle * 0.5f)
             {
                 if (CheckCollision())
                 {
