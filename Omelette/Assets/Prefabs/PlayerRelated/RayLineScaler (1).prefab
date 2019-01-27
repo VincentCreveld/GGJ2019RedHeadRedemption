@@ -77,10 +77,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineToScale: {fileID: 116583788944056956}
+  rayLength: 5
   cursor: {fileID: 116583789293043704}
   layerMask:
     serializedVersion: 2
-    m_Bits: 307
+    m_Bits: 6451
 --- !u!1 &116583789277712223
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +199,6 @@ GameObject:
   m_Component:
   - component: {fileID: 116583789867765522}
   - component: {fileID: 116583789867765523}
-  - component: {fileID: 116583789867765525}
   m_Layer: 0
   m_Name: RayLineScaler (1)
   m_TagString: Untagged
@@ -229,16 +229,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116583789867765526}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &116583789867765525
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116583789867765526}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

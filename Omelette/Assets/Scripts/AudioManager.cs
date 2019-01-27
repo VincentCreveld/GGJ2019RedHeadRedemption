@@ -12,7 +12,12 @@ public class AudioManager : MonoBehaviour
 	private AudioClip currentClip;
 	private Queue<AudioClip> audioQueue;
 
-	[SerializeField]
+    internal void PlayAudio(object audioClipName)
+    {
+        throw new NotImplementedException();
+    }
+
+    [SerializeField]
 	private AudioSource audioSource;
 	private bool isAudioPlaying;
 
