@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: ec8de1bb665732a4b92670c68b8d6a6d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Blik
+    100002: Bottle001
+    100004: Bottom001
+    100006: Cylinder001
+    100008: Lipje
+    100010: Mid001
+    100012: //RootNode
+    100014: Top001
+    100016: WholeBottle
+    400000: Blik
+    400002: Bottle001
+    400004: Bottom001
+    400006: Cylinder001
+    400008: Lipje
+    400010: Mid001
+    400012: //RootNode
+    400014: Top001
+    400016: WholeBottle
+    2100000: Blik
+    2100002: 'Material #25'
+    2100004: Bottle
+    2100006: Fluid
+    2300000: Blik
+    2300002: Bottom001
+    2300004: Cylinder001
+    2300006: Lipje
+    2300008: Mid001
+    2300010: Top001
+    2300012: WholeBottle
+    3300000: Blik
+    3300002: Bottom001
+    3300004: Cylinder001
+    3300006: Lipje
+    3300008: Mid001
+    3300010: Top001
+    3300012: WholeBottle
+    4300000: Blik
+    4300002: Lipje
+    4300004: Bottom001
+    4300006: Mid001
+    4300008: Top001
+    4300010: WholeBottle
+    4300012: Cylinder001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blik
+    second: {fileID: 2100000, guid: 1ab33b27f0677d7448e582eb8aa01129, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottle
+    second: {fileID: 2100000, guid: f9b20e0568be78948a7c56c1a7b0f682, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fluid
+    second: {fileID: 2100000, guid: f26964faa8f9d8d46b71d2a273370415, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #25'
+    second: {fileID: 2100000, guid: 6bf21029434324541924eb1a989bdd95, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
