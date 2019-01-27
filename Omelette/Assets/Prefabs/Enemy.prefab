@@ -196,8 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4443ae9fd54bc3e4fb4add2ab913c512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionDistance: 11.75
-  visionAngle: 29.1
+  visionDistance: 10.5
+  visionAngle: 65.2
   maxSanityLoss: 1
   playerManager: {fileID: 0}
 --- !u!114 &674892704540985126
