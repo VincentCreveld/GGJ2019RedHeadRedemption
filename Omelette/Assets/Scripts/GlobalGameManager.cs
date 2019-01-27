@@ -11,11 +11,16 @@ public class GlobalGameManager : MonoBehaviour
     private string[] levelNames;
     [HideInInspector]
     public bool[] levelFinished;
+    [SerializeField]
+    private KitchenManager kitchenManager;
+    public bool[] narrationClipsPlayed;
 
     public void FinishLevel()
     {
+        int index = SceneManager.GetActiveScene().buildIndex;
         levelFinished[SceneManager.GetActiveScene().buildIndex] = true;
         SceneManager.LoadScene(kitchenSceneName);
+        kitchenManager.PlayNarration(index);
     }
 
     public void GoToNextLevel()
