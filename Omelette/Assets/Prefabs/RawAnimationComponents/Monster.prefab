@@ -209,7 +209,7 @@ Transform:
   m_GameObject: {fileID: 621319938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children:
   - {fileID: 711914427}
   - {fileID: 761676476}
@@ -226,7 +226,7 @@ Animator:
   m_GameObject: {fileID: 621319938}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8d31518e41511ca40b22b2d44c27fe0d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 02d45183ba8ab3f4d9d7ebf642ccffff, type: 2}
+  m_Controller: {fileID: 9100000, guid: 08e3e3b856400ef4b8dd04ddcdee8385, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -989,10 +989,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b39ca86c14585ab43906c2fc2188b086, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.9106949
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b39ca86c14585ab43906c2fc2188b086, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b39ca86c14585ab43906c2fc2188b086, type: 3}
       propertyPath: m_Materials.Array.data[0]
