@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExitTrigger : MonoBehaviour
+public class ProximityKill : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerManager playerManager;
-
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (other.gameObject.tag == "Player")
         {
-            if (playerManager.hasWin)
-                Debug.Log("YOU HAVE WON");
+            transform.parent.GetComponent<Enemy>().KillPlayer();
         }
     }
 }
