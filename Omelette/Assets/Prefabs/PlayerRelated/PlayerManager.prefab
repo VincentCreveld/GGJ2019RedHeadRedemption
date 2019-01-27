@@ -49,6 +49,14 @@ MonoBehaviour:
   sanityLossPerMinute: 0.5
   vignIntensity: 2
   canLose: 1
+  sanityMusicSources:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  music:
+  - {fileID: 8300000, guid: cc9eae0e6bd3fa4429d7d2c776ba0df3, type: 3}
+  - {fileID: 8300000, guid: b1d585722c1ca8440bc9f49d15fb40dc, type: 3}
+  - {fileID: 8300000, guid: 2efcd3d4e86e3914d8c856509815eb1f, type: 3}
   sanityLevel: 5
   hasWin: 0
 --- !u!114 &1611939878
