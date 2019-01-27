@@ -10,8 +10,7 @@ public class LevelManager : MonoBehaviour
 	[SerializeField]
 	private List<NavMeshAgent> enemies;
 
-	[SerializeField]
-	private AudioManager announcementManager;
+	public AudioManager announcementManager;
 
 	private string clipToPlay = "yeet";
 
