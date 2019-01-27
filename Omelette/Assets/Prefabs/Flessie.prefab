@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainObject: {fileID: 5805397632995754424}
-  bottleObject: {fileID: 0}
+  bottleObject: {fileID: 3143788327705312506}
 --- !u!1001 &8349849079732189081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -378,6 +378,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b4a7672d0d7e4e4594c6c69317f6e00, type: 3}
+--- !u!1 &3143788327705312506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6359194465343359843, guid: 5b4a7672d0d7e4e4594c6c69317f6e00,
+    type: 3}
+  m_PrefabInstance: {fileID: 8349849079732189081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6812700540995467992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3272723248158756161, guid: 5b4a7672d0d7e4e4594c6c69317f6e00,
