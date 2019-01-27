@@ -34,8 +34,9 @@ public class PlayerManager : MonoBehaviour
         for (int i = 0; i < sanityMusicSources.Length; i++)
         {
             sanityMusicSources[i].clip = music[i];
+			sanityMusicSources[i].Play();
         }
-        sanityMusicSources[0].Play();
+        //sanityMusicSources[0].Play();
     }
 
     public void DecreaseSanity(float changeAmount)
@@ -51,8 +52,9 @@ public class PlayerManager : MonoBehaviour
             sanityLevel -= changeAmount;
             if(sanityLevel != maxSanityLevel)
             {
-                sanityMusicSources[1].Play();
-            }
+				sanityMusicSources[1].volume = Mathf.Abs(1 - Mathf.InverseLerp(0, maxSanityLevel, sanityLevel));
+				sanityMusicSources[2].volume = Mathf.Abs(1 - Mathf.InverseLerp(maxSanityLevel * 0.5f, maxSanityLevel, sanityLevel));
+			}
             if(sanityLevel < maxSanityLevel * 0.5f)
             {
                 sanityMusicSources[2].Play();
