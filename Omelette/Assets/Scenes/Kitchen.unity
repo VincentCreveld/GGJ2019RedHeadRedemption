@@ -1254,6 +1254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kitchenSceneName: Kitchen
   levelNames:
+  - Level2
   - MainScene
   levelFinished: 
   kitchenManager: {fileID: 452058237}
