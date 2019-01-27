@@ -80,4 +80,15 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, visionDistance);
     }
+
+	private void OnDrawGizmosSelected()
+	{
+		Vector3 target = (transform.forward).normalized * visionDistance;
+		target = Quaternion.Euler(0, visionAngle / 2, 0) * target;
+		Gizmos.DrawLine(transform.position, (transform.position + target));
+
+		Vector3 target2 = (transform.forward).normalized * visionDistance;
+		target2 = Quaternion.Euler(0, -visionAngle / 2, 0) * target2;
+		Gizmos.DrawLine(transform.position, (transform.position + target2));
+	}
 }

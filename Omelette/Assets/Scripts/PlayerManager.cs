@@ -57,7 +57,17 @@ public class PlayerManager : MonoBehaviour
         ppProfile.colorGrading.settings = CGrad;
     }
 
-    private void ResetPostProcessing()
+	public float GetCurrentSanityOnScale01()
+	{
+		return Mathf.Clamp01(Mathf.InverseLerp(0, maxSanityLevel, sanityLevel));
+	}
+
+	private void OnDisable()
+	{
+		ResetPostProcessing();
+	}
+
+	private void ResetPostProcessing()
     {
         VignetteModel.Settings vign = ppProfile.vignette.settings;
         vign.intensity = 0;

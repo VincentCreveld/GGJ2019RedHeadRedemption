@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -842,7 +842,6 @@ MonoBehaviour:
   isEmployee: 1
   timeToClean: 5
   lookAtTime: 1
-  TimeToStand: 5
 --- !u!1 &1644311218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1160,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8713598681211362321, guid: 943515a18d1865744865e20831082748,
+        type: 3}
+      propertyPath: visionAngle
+      value: 73.55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 943515a18d1865744865e20831082748, type: 3}
 --- !u!1001 &3430063855804473038
@@ -1263,4 +1267,3 @@ MonoBehaviour:
   isEmployee: 1
   timeToClean: 5
   lookAtTime: 1
-  TimeToStand: 5
