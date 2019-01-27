@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ExitTrigger : MonoBehaviour
+public class KitchenExitTrigger : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerManager playerManager;
     private GlobalGameManager GGManager;
+    [SerializeField]
+    private KitchenManager kitchenManager;
 
     private void Start()
     {
@@ -17,8 +18,8 @@ public class ExitTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (playerManager.hasWin)
-                GGManager.GoToNextLevel();
+            if(GGManager.narrationClipsPlayed[kitchenManager.previouslevel])
+            GGManager.GoToNextLevel();
         }
     }
 }

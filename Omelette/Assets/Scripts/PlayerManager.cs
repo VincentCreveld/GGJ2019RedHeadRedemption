@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     private Camera cam;
     [SerializeField]
     private float maxSanityLevel;
+    [SerializeField]
+    private float sanityLossPerMinute;
     private PostProcessingProfile ppProfile;
     [SerializeField]
     private float vignIntensity;
@@ -24,6 +26,7 @@ public class PlayerManager : MonoBehaviour
         ppProfile = cam.GetComponent<PostProcessingBehaviour>().profile;
         sanityLevel = maxSanityLevel;
         ResetPostProcessing();
+        StartCoroutine(LoseSanityOverTime());
     }
 
     public void DecreaseSanity(float changeAmount)
@@ -38,6 +41,15 @@ public class PlayerManager : MonoBehaviour
         {
             sanityLevel -= changeAmount;
             ChangePostProcessing();
+        }
+    }
+
+    private IEnumerator LoseSanityOverTime()
+    {
+        while (true)
+        {
+            DecreaseSanity(sanityLossPerMinute / 120f);
+            yield return new WaitForSeconds(.5f);
         }
     }
 
