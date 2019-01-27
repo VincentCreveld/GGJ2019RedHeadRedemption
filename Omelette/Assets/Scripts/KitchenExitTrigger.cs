@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class KitchenExitTrigger : MonoBehaviour
 {
     private GlobalGameManager GGManager;
+    [SerializeField]
+    private KitchenManager kitchenManager;
 
     private void Start()
     {
@@ -14,6 +16,10 @@ public class KitchenExitTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GGManager.GoToNextLevel();
+        if (other.gameObject.tag == "Player")
+        {
+            if(GGManager.narrationClipsPlayed[kitchenManager.previouslevel])
+            GGManager.GoToNextLevel();
+        }
     }
 }

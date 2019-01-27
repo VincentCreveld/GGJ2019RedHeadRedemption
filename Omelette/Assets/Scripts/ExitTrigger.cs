@@ -6,13 +6,19 @@ public class ExitTrigger : MonoBehaviour
 {
     [SerializeField]
     private PlayerManager playerManager;
+    private GlobalGameManager GGManager;
+
+    private void Start()
+    {
+        GGManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GlobalGameManager>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
             if (playerManager.hasWin)
-                Debug.Log("YOU HAVE WON");
+                GGManager.GoToNextLevel();
         }
     }
 }
