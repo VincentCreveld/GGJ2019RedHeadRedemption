@@ -1254,8 +1254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kitchenSceneName: Kitchen
   levelNames:
-  - Level2
   - MainScene
+  - Level2
   levelFinished: 
   kitchenManager: {fileID: 452058237}
   narrationClipsPlayed: 
